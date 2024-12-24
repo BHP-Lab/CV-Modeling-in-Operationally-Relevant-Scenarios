@@ -1,0 +1,19 @@
+import pandas as pd
+import os
+import matplotlib.pyplot as plt
+
+file_path = 'GWarmUp.xls'
+
+# Load the Excel file
+data = pd.read_excel(file_path)
+
+# Display the first few rows of the dataframe
+print(data.head())
+print(data.columns)
+
+
+# Assuming the second column is the one you want to convert to a list
+second_column_list = data.iloc[:, 1].tolist()
+
+# Print the list to verify
+print(second_column_list)
